@@ -21,14 +21,14 @@ namespace Proyecto2CrearPrimerRegistroCompleto
         }
 
         //Creamos la funcion "Existe" para usarla en el guardar y verificar si el id ya existe
-        public static bool Existe(int id)
+        public static bool Existe(int id, string descripcion)
         {
             Contexto contexto = new Contexto();
             bool encontrado = false;
 
             try
             {
-                encontrado = contexto.Roles.Any(e => e.RolId == id);
+                encontrado = contexto.Roles.Any(e => e.RolId == id || e.Descripcion == descripcion);
             }
             catch (Exception)
             {
@@ -102,7 +102,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             Roles rol = new Roles();
 
             //Verificamos que no exista un id igual, en caso de que exista, no se permite que se almacene
-            if (!Existe(Convert.ToInt32(RolIdTextBox.Text)))
+            if (!Existe(Convert.ToInt32(RolIdTextBox.Text), DescripcionTextBox.Text))
             {
                 rol.RolId = Convert.ToInt32(RolIdTextBox.Text);
                 rol.FechaCreacion = Convert.ToDateTime(FechaCreacionMaskedTextBox.Text);
@@ -113,7 +113,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
                 contexto.Dispose();
             }
             else
-                MessageBox.Show("Este Id ya existe en la base de datos");
+                MessageBox.Show("Este Rol ya existe en la base de datos");
         }
 
         private void EditarBoton_Click(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             Contexto contexto = new Contexto();
             Roles rol = new Roles();
 
-            if (Existe(Convert.ToInt32(RolIdTextBox.Text)))
+            if (Existe(Convert.ToInt32(RolIdTextBox.Text), DescripcionTextBox.Text))
             {
                 rol.RolId = Convert.ToInt32(RolIdTextBox.Text);
                 rol.FechaCreacion = Convert.ToDateTime(FechaCreacionMaskedTextBox.Text);
@@ -152,7 +152,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
 
         private void EliminarBoton_Click(object sender, EventArgs e)
         {
-            if (Existe(Convert.ToInt32(RolIdTextBox.Text)))
+            if (Existe(Convert.ToInt32(RolIdTextBox.Text), DescripcionTextBox.Text))
             {
                 Contexto contexto = new Contexto();
                 Eliminar(Convert.ToInt32(RolIdTextBox.Text));

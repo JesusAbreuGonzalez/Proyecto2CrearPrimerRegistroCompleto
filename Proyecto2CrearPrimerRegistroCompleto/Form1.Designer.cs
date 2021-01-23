@@ -47,7 +47,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             // 
             this.EliminarBoton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarBoton.Image")));
             this.EliminarBoton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarBoton.Location = new System.Drawing.Point(551, 326);
+            this.EliminarBoton.Location = new System.Drawing.Point(324, 255);
             this.EliminarBoton.Name = "EliminarBoton";
             this.EliminarBoton.Size = new System.Drawing.Size(93, 61);
             this.EliminarBoton.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             // 
             this.FechaCreacionLabel.AutoSize = true;
             this.FechaCreacionLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FechaCreacionLabel.Location = new System.Drawing.Point(393, 27);
+            this.FechaCreacionLabel.Location = new System.Drawing.Point(42, 174);
             this.FechaCreacionLabel.Name = "FechaCreacionLabel";
             this.FechaCreacionLabel.Size = new System.Drawing.Size(171, 28);
             this.FechaCreacionLabel.TabIndex = 4;
@@ -80,7 +80,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(42, 95);
+            this.label1.Location = new System.Drawing.Point(42, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 28);
             this.label1.TabIndex = 5;
@@ -96,7 +96,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             // 
             // FechaCreacionMaskedTextBox
             // 
-            this.FechaCreacionMaskedTextBox.Location = new System.Drawing.Point(570, 31);
+            this.FechaCreacionMaskedTextBox.Location = new System.Drawing.Point(219, 178);
             this.FechaCreacionMaskedTextBox.Mask = "00/00/0000";
             this.FechaCreacionMaskedTextBox.Name = "FechaCreacionMaskedTextBox";
             this.FechaCreacionMaskedTextBox.Size = new System.Drawing.Size(97, 27);
@@ -106,10 +106,10 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             // 
             // DescripcionTextBox
             // 
-            this.DescripcionTextBox.Location = new System.Drawing.Point(166, 95);
+            this.DescripcionTextBox.Location = new System.Drawing.Point(166, 110);
             this.DescripcionTextBox.Multiline = true;
             this.DescripcionTextBox.Name = "DescripcionTextBox";
-            this.DescripcionTextBox.Size = new System.Drawing.Size(500, 193);
+            this.DescripcionTextBox.Size = new System.Drawing.Size(163, 28);
             this.DescripcionTextBox.TabIndex = 8;
             // 
             // EditarBoton
@@ -117,7 +117,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             this.EditarBoton.AllowDrop = true;
             this.EditarBoton.Image = ((System.Drawing.Image)(resources.GetObject("EditarBoton.Image")));
             this.EditarBoton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EditarBoton.Location = new System.Drawing.Point(364, 326);
+            this.EditarBoton.Location = new System.Drawing.Point(185, 254);
             this.EditarBoton.Name = "EditarBoton";
             this.EditarBoton.Size = new System.Drawing.Size(93, 62);
             this.EditarBoton.TabIndex = 9;
@@ -130,7 +130,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             // 
             this.GuardarBoton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarBoton.Image")));
             this.GuardarBoton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarBoton.Location = new System.Drawing.Point(166, 327);
+            this.GuardarBoton.Location = new System.Drawing.Point(42, 255);
             this.GuardarBoton.Name = "GuardarBoton";
             this.GuardarBoton.Size = new System.Drawing.Size(93, 61);
             this.GuardarBoton.TabIndex = 10;
@@ -142,7 +142,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeight = 29;
-            this.dataGridView1.Location = new System.Drawing.Point(723, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(477, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
@@ -154,7 +154,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1268, 473);
+            this.ClientSize = new System.Drawing.Size(1011, 393);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.GuardarBoton);
             this.Controls.Add(this.EditarBoton);
