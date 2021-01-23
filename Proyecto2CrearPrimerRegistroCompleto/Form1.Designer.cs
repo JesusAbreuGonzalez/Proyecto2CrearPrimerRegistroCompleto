@@ -85,6 +85,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             this.label1.Size = new System.Drawing.Size(118, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "Descripción:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // RolIdTextBox
             // 

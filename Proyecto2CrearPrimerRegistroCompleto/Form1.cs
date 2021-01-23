@@ -152,9 +152,19 @@ namespace Proyecto2CrearPrimerRegistroCompleto
 
         private void EliminarBoton_Click(object sender, EventArgs e)
         {
-            Contexto contexto = new Contexto();
-            Eliminar(Convert.ToInt32(RolIdTextBox.Text));
-            dataGridView1.DataSource = contexto.Roles.ToList();
+            if (Existe(Convert.ToInt32(RolIdTextBox.Text)))
+            {
+                Contexto contexto = new Contexto();
+                Eliminar(Convert.ToInt32(RolIdTextBox.Text));
+                dataGridView1.DataSource = contexto.Roles.ToList();
+            }
+            else
+                MessageBox.Show("Este Id no existe en la base de datos");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
