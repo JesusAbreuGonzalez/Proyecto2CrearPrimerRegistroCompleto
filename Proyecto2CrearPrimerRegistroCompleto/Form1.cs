@@ -101,6 +101,9 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             Contexto contexto = new Contexto();
             Roles rol = new Roles();
 
+            if (RolIdTextBox.Text == "" || DescripcionTextBox.Text == "" || FechaCreacionMaskedTextBox.Text == "")
+                MessageBox.Show("Todos los campos deben estar llenos");
+
             //Verificamos que no exista un id igual, en caso de que exista, no se permite que se almacene
             if (!Existe(Convert.ToInt32(RolIdTextBox.Text), DescripcionTextBox.Text))
             {
@@ -114,12 +117,18 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             }
             else
                 MessageBox.Show("Este Rol ya existe en la base de datos");
+            RolIdTextBox.Text = "";
+            FechaCreacionMaskedTextBox.Text = "";
+            DescripcionTextBox.Text = "";
         }
 
         private void EditarBoton_Click(object sender, EventArgs e)
         {
             Contexto contexto = new Contexto();
             Roles rol = new Roles();
+
+            if (RolIdTextBox.Text == "" || DescripcionTextBox.Text == "" || FechaCreacionMaskedTextBox.Text == "")
+                MessageBox.Show("Todos los campos deben estar llenos");
 
             if (Existe(Convert.ToInt32(RolIdTextBox.Text), DescripcionTextBox.Text))
             {
@@ -133,6 +142,9 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             }
             else
                 MessageBox.Show("Este Id no existe en la base de datos");
+            RolIdTextBox.Text = "";
+            FechaCreacionMaskedTextBox.Text = "";
+            DescripcionTextBox.Text = "";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -152,6 +164,10 @@ namespace Proyecto2CrearPrimerRegistroCompleto
 
         private void EliminarBoton_Click(object sender, EventArgs e)
         {
+           
+            if (RolIdTextBox.Text == "")
+                MessageBox.Show("El campo Rol Id Debe no puede estar vacio");
+
             if (Existe(Convert.ToInt32(RolIdTextBox.Text), DescripcionTextBox.Text))
             {
                 Contexto contexto = new Contexto();
@@ -160,6 +176,9 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             }
             else
                 MessageBox.Show("Este Id no existe en la base de datos");
+            RolIdTextBox.Text = "";
+            FechaCreacionMaskedTextBox.Text = "";
+            DescripcionTextBox.Text = "";
         }
 
         private void label1_Click(object sender, EventArgs e)
