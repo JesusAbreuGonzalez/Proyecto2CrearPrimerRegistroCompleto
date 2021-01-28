@@ -40,9 +40,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             this.buscarBoton = new System.Windows.Forms.Button();
             this.FechaCreacionDateTime = new System.Windows.Forms.DateTimePicker();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,16 +138,6 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             this.DescripcionTextBox.Size = new System.Drawing.Size(163, 28);
             this.DescripcionTextBox.TabIndex = 8;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(571, 36);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(369, 279);
-            this.dataGridView1.TabIndex = 13;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -158,8 +146,7 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 393);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(518, 371);
             this.Controls.Add(this.FechaCreacionDateTime);
             this.Controls.Add(this.buscarBoton);
             this.Controls.Add(this.GuardarBoton);
@@ -173,7 +160,6 @@ namespace Proyecto2CrearPrimerRegistroCompleto
             this.Name = "Form1";
             this.Text = "Registro formulario";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,7 +176,6 @@ namespace Proyecto2CrearPrimerRegistroCompleto
         private System.Windows.Forms.Button buscarBoton;
         private System.Windows.Forms.DateTimePicker FechaCreacionDateTime;
         private System.Windows.Forms.TextBox DescripcionTextBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
